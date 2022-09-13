@@ -1,15 +1,66 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
-
+let generateBtn = document.querySelector("#generate");
+let lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+let uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+let especials = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = "";
+  // step 1: get requirements from UI
+   // get checkboxes
+  // step 2: 
+  // let password = generatePassword() 
+    let lowercaseChoice = window.prompt("Do you want lowercase letters in your password?");
+    lowercaseChoice = lowercaseChoice.toUpperCase();
 
-  passwordText.value = password;
+    let uppercaseChoice = window.prompt("Do you want uppercase letters in your password?");
+    uppercaseChoice = uppercaseChoice.toUpperCase();
+
+    let numbersChoice = window.prompt("Do you want numbers in your password?");
+    numbersChoice = numbersChoice.toUpperCase();
+
+    let especialsChoice = window.prompt("Do you want especial characters in your password?");
+    especialsChoice = especialsChoice.toUpperCase();
+
+      if (lowercaseChoice == "YES"){
+        let lowercaseIndex = Math.floor(Math.random() * lowercase.length);
+        let lowercaseLetter = lowercase[lowercaseIndex];
+        password = password.concat(lowercaseLetter);
+        console.log("password is " + password);
+      }
+
+      if (uppercaseChoice == "YES"){
+        let uppercaseIndex = Math.floor(Math.random() * uppercase.length);
+        let uppercaseLetter = uppercase[uppercaseIndex];
+        password = password.concat(uppercaseLetter);
+        console.log("password is " + password);
+      }
+
+      if (numbersChoice == "YES"){
+        let numbersIndex = Math.floor(Math.random() * numbers.length);
+        let numbersLetter = numbers[numbersIndex];
+        password = password.concat(numbersLetter);
+        console.log("password is " + password);
+      }
+
+      if (especialsChoice == "YES"){
+        let especialsIndex = Math.floor(Math.random() * especials.length);
+        let especialsLetter = especials[especialsIndex];
+        password = password.concat(especialsLetter);
+        console.log("password is " + password);
+      }
+      
+    // let lowercaseIndex = Math.floor(Math.random() * lowercase.length);
+    // let uppercaseIndex = Math.floor(Math.random() * uppercase.length);
+    // let numbersIndex = Math.floor(Math.random() * numbers.length);
+    // let specialsIndex = Math.floor(Math.random() * specials.length);
+
+  // let passwordText = document.querySelector("#password");
+
+  // passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
