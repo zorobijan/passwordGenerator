@@ -1,9 +1,9 @@
 <!-- PASSWORD GENERATOR -->
 <br />
 <div>
-  <a href="https://github.com/github_zorobijan/passwordGenerator">LINK TO REPO</a>
+  <a href="https://github.com/zorobijan/projectQuiz.git">LINK TO REPO</a>
 
-<h3>PASSWORD GENERATOR</h3>
+<h3>History Quiz</h3>
 
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -15,7 +15,7 @@
       <ul>
   </ul>
    <p>
-    This application enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that I wrote. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.</p>
+    This web application is a timed quiz. Users will answer questions one at a time. If they get a question wrong, time will be deducted. At the end of the quiz, the user can input their initials and review their score.</p>
 </details>
 <p>(<a href="#readme-top">back to top</a>)</p>
 ## Contact
